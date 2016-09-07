@@ -9,6 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var ageEntry: UITextField!
+    
+    @IBOutlet weak var cloudC: UILabel!
+    @IBOutlet weak var humanY: UILabel!
+    
+    @IBAction func cloudCalc(_ sender: AnyObject) {
+        
+        var cloudAge = Int(ageEntry.text!)!
+        cloudAge = cloudAge * 10
+        
+        cloudC.text = "\(cloudAge)"
+        
+        humanY.text = ageEntry.text
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
